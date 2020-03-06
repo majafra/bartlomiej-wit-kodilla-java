@@ -10,6 +10,7 @@ public class CollectionTestSuite {
     public void testOddNumbersExterminatorNormalList() {
         //Given
         OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
+
         //When
         ArrayList<Integer> numbers = new ArrayList<Integer>();
 
@@ -21,27 +22,29 @@ public class CollectionTestSuite {
         numbers.add(6);
         numbers.add(7);
 
-        oddNumbersExterminator.exterminate(numbers);
+        ArrayList<Integer>results = oddNumbersExterminator.exterminate(numbers);
+
         //Then
-        ArrayList<Integer> results = new ArrayList<Integer>();
+        ArrayList<Integer> expected = new ArrayList<Integer>();
 
-        results.add(2);
-        results.add(4);
-        results.add(6);
+        expected.add(2);
+        expected.add(4);
+        expected.add(6);
 
-        Assert.assertEquals(evenNumber, results);
+        Assert.assertEquals(expected, results);
     }
-}
+
     @Test
     public void testOddNumbersExterminatorEmptyList() {
         //Given
         OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
-        //When
-        ArrayList<Integer> numbers1 = new ArrayList<Integer>();
 
-        oddNumbersExterminator.exterminate(numbers1);
+        //When
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+        ArrayList<Integer>results= oddNumbersExterminator.exterminate(numbers);
+
         //Then
-        ArrayList<Integer> results1 = new ArrayList<Integer>();
-        Assert.assertEquals(evenNumber, results1);
+        ArrayList<Integer> expected = new ArrayList<Integer>();
+        Assert.assertEquals(expected, results);
     }
 }
