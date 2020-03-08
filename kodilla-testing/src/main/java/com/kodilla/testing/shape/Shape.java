@@ -65,8 +65,7 @@ class ShapeCollector{
         return figure;
     }
     public Shape getFigure(int n) {
-        figure.get(n);
-        return shape;
+        return figure.get(n);
     }
 }
 

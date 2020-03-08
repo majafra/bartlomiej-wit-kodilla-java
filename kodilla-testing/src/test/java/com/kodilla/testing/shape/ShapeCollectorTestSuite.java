@@ -69,7 +69,7 @@ public class ShapeCollectorTestSuite {
         shapeCollector.addFigure(circle);
         shapeCollector.addFigure(square);
 
-        Shape result = shapeCollector.getFigure(2);
+        Shape result = shapeCollector.getFigure(1);
         //Then
         Assert.assertEquals(circle,result);
     }
