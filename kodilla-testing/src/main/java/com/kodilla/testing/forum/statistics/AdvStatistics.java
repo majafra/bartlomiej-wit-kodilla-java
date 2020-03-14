@@ -18,19 +18,19 @@ public class AdvStatistics {
         usersNames = statistics.usersNames().size();
 
         if (usersNames !=0) {
-            postsPerUser = postsCount / usersNames;
+            postsPerUser = postsCount / (double)usersNames;
         }else{
             System.out.println("Brak uczestników forum");
             postsPerUser=0.0;
         }
         if (usersNames !=0) {
-            commentsPerUser = commentsCount / usersNames;
+            commentsPerUser = commentsCount /(double) usersNames;
         }else{
             System.out.println("Brak uczestników forum");
             commentsPerUser=0.0;
         }
         if (postsCount !=0) {
-            commentsPerPost = commentsCount / postsCount;
+            commentsPerPost = commentsCount /(double) postsCount;
         }else{
             System.out.println("Brak postów");
             commentsPerPost=0.0;

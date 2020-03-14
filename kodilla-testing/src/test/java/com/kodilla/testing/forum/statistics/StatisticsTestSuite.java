@@ -152,7 +152,7 @@ public class StatisticsTestSuite{
         double commentsPerPostTest = advStatistics.getCommentsPerPost();
 
         //Then
-        Assert.assertTrue(postsCountTest-commentsCountTest>0);
+        Assert.assertTrue(postsCountTest-commentsCountTest<0);
         Assert.assertEquals(5, postsCountTest);
         Assert.assertEquals(10, commentsCountTest);
         Assert.assertEquals(5, usersNamesTest);
