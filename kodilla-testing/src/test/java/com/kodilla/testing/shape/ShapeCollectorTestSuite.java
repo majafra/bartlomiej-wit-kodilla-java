@@ -1,13 +1,9 @@
 package com.kodilla.testing.shape;
 
-import com.kodilla.testing.shape.Shape;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.*;
-import java.util.ArrayList;
-
-
 import java.util.ArrayList;
 
 
@@ -38,9 +34,10 @@ public class ShapeCollectorTestSuite {
         Shape triangle = new Triangle(2.0,2.0);
         Shape square = new Square (2.0);
 
-        ArrayList<Shape> results = shapeCollector.addFigure(triangle);
+        shapeCollector.addFigure(triangle);
+        int result=shapeCollector.checkSize();
         //Then
-        Assert.assertEquals(1,results.size());
+        Assert.assertEquals(1,result);
     }
     @Test
     public void testRemoveFigure() {
@@ -52,9 +49,11 @@ public class ShapeCollectorTestSuite {
         Shape square = new Square (2.0);
 
         shapeCollector.addFigure(triangle);
-        ArrayList<Shape> results = shapeCollector.removeFigure(triangle);
+        shapeCollector.removeFigure(triangle);
+        int result=shapeCollector.checkSize();
+
         //Then
-        Assert.assertEquals(0,results.size());
+        Assert.assertEquals(0,result);
     }
     @Test
     public void testGetFigure() {

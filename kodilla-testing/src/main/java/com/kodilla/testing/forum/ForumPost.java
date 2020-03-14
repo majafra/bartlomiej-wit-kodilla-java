@@ -15,7 +15,7 @@ public class ForumPost {
     public String getAuthor() {
         return author;
     }
-
+//post1.equals(post2)
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
