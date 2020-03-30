@@ -7,8 +7,16 @@ public interface ArrayOperations {
 
     public static double getAverage(int[] numbers) {
 
-        IntStream.rangeClosed(numbers[0], numbers.length).forEach(System.out::println);
-        double result = IntStream.rangeClosed(numbers[0], numbers.length).average().getAsDouble();
+        IntStream
+                .range(0, numbers.length)
+                .map(s->numbers[s])
+                .forEach(System.out::println);
+
+        double result = IntStream
+                .range(0, numbers.length)
+                .map(s->numbers[s])
+                .average()
+                .getAsDouble();
         return result;
     }
 }

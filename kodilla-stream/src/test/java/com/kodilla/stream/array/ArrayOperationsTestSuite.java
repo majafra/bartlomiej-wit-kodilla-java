@@ -13,14 +13,14 @@ public class ArrayOperationsTestSuite {
     public void testGetAverage() {
         //Given
         int numbers[] = new int[5];
-        numbers[0] = 1;
-        numbers[1] = 2;
-        numbers[2] = 3;
-        numbers[3] = 4;
-        numbers[4] = 5;
+        numbers[0] = 6;
+        numbers[1] = 6;
+        numbers[2] = 6;
+        numbers[3] = 6;
+        numbers[4] = 6;
         //When
         double result = getAverage(numbers);
         //Then
-        Assert.assertEquals(3.0, result,0);
+        Assert.assertEquals(6.0, result,0);
     }
 }
