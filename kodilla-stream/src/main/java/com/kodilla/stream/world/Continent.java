@@ -7,8 +7,8 @@ import java.util.Set;
 
 public class Continent {
 
-    String nameOfContinent;
-    List<Country> countries  = new ArrayList<Country>();
+    private String nameOfContinent;
+    private List<Country> countries  = new ArrayList<Country>();
 
     public Continent(String nameOfContinent) {
         this.nameOfContinent = nameOfContinent;

@@ -4,8 +4,8 @@ import java.math.BigDecimal;
 
 public class Country {
 
-    String land;
-    BigDecimal peopleQuantity;
+    private String land;
+    private BigDecimal peopleQuantity;
 
     public Country(String land, BigDecimal peopleQuantity) {
         this.land = land;
