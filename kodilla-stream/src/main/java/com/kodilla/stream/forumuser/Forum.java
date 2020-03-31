@@ -3,8 +3,6 @@ package com.kodilla.stream.forumuser;
 import java.util.ArrayList;
 import java.util.List;
 
-import static javafx.scene.input.KeyCode.M;
-
 public final class Forum {
     public static List<ForumUser> getUserList() {
         final List<ForumUser> theList = new ArrayList<>();

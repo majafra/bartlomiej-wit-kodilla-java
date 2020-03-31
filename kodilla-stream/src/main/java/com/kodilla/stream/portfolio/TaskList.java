@@ -30,13 +30,13 @@ public class TaskList {
                 ", name='" + name + '\'' +
                 '}';
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof TaskList)) return false;
         TaskList taskList = (TaskList) o;
-        return Objects.equals(tasks, taskList.tasks) &&
-                Objects.equals(name, taskList.name);
+        return Objects.equals(name, taskList.name);
     }
 }
+
+

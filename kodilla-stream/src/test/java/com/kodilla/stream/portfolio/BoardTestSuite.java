@@ -150,7 +150,7 @@ public class BoardTestSuite {
                 .filter(inProgressTasks::contains)
                 .flatMap(tl -> tl.getTasks().stream())
                 .map(t -> t.getCreated())
-                .map(z->z.until(LocalDate.now(),ChronoUnit.DAYS))
+                .map(z->ChronoUnit.DAYS.between(z,LocalDate.now()))
                 .mapToLong(i->i)
                 .average()
                 .getAsDouble();
