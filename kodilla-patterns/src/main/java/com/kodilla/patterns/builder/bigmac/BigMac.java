@@ -36,7 +36,7 @@ public class BigMac {
             return new BigMac(bun, burgers, sauce, ingredients);
         }
     }
-        public BigMac(String bun, int burgers, String sauce, List<String> ingredients) {
+        private BigMac(String bun, int burgers, String sauce, List<String> ingredients) {
             this.bun = bun;
             this.burgers = burgers;
             this.sauce = sauce;
