@@ -13,8 +13,6 @@ public class Item {
     private int quantity;
     private BigDecimal value;
     private Invoice invoice;
-    @ManyToOne
-    @JoinColumn(name="PRODUCT_ID")
     private Product product;
 
     public Item() {
@@ -57,6 +55,12 @@ public class Item {
     @JoinColumn(name = "Invoice_ID")
     public Invoice getInvoice() {
         return invoice;
+    }
+
+    @ManyToOne
+    @JoinColumn(name="PRODUCT_ID")
+    public Product getProduct() {
+        return product;
     }
 
     public void setInvoice(Invoice invoice) {

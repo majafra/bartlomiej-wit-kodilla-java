@@ -38,23 +38,25 @@ public class InvoiceDaoTestSuite {
         invoice1.getItems().add(item3);
         invoice1.getItems().add(item4);
 
+        item1.setInvoice(invoice1);
+        item2.setInvoice(invoice1);
+        item3.setInvoice(invoice1);
+        item4.setInvoice(invoice1);
+
         //When
-//        productDao.save();
+        productDao.save(car);
+        invoiceDao.save(invoice1);
         itemDao.save(item1);
         itemDao.save(item2);
         itemDao.save(item3);
         itemDao.save(item4);
 
-        invoiceDao.save(invoice1);
-
+        int idcar = car.getId();
         int idItem1 = item1.getId();
         int idItem2 = item2.getId();
         int idItem3 = item1.getId();
         int idItem4 = item1.getId();
-
         int idInvoice = invoice1.getId();
-
-
         //Then
         Assert.assertNotEquals(0, idItem1);
         Assert.assertNotEquals(0, idItem2);
