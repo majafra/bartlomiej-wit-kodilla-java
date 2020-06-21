@@ -35,7 +35,7 @@ public class Product {
         this.id = id;
     }
 
-    private void setFirstname(String name) {
+    private void setName(String name) {
         this.name = name;
     }
 
