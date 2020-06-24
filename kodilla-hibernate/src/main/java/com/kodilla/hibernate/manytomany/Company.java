@@ -7,7 +7,7 @@ import java.util.List;
 
 @NamedQuery(
         name="Company.retrieveFirstLetters",
-        query = "FROM Company WHERE LEFT(name, 3) LIKE :NAME "
+        query = "FROM Company WHERE SUBSTR(name, 1, 3) LIKE :COMPANYNAME "
 )
 @Entity
 @Table(name = "COMPANIES")
