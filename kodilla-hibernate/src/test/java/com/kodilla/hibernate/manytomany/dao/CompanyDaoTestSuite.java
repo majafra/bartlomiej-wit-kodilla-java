@@ -9,8 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
+@Transactional
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class CompanyDaoTestSuite {
@@ -20,7 +22,7 @@ public class CompanyDaoTestSuite {
     EmployeeDao employeeDao;
 
     @Test
-    public void testSaveManyToMany(){
+    public void testSaveManyToMany() {
         //Given
         Employee johnSmith = new Employee("John", "Smith");
         Employee stephanieClarckson = new Employee("Stephanie", "Clarckson");
@@ -64,8 +66,9 @@ public class CompanyDaoTestSuite {
             //do nothing
         }
     }
+
     @Test
-    public void testMethods(){
+    public void testMethods() {
         //Given
 
         Employee johnSmith = new Employee("John", "Smith");
@@ -95,7 +98,11 @@ public class CompanyDaoTestSuite {
         int dataMaestersId = dataMaesters.getId();
         companyDao.save(greyMatter);
         int greyMatterId = greyMatter.getId();
-        List<Company> result1=companyDao.retrieveFirstLetters("Sof");
+        employeeDao.save(johnSmith);
+        employeeDao.save(stephanieClarckson);
+        employeeDao.save(lindaKovalsky);
+
+        List<Company> result1 = companyDao.retrieveFirstLetters("Sof");
         List<Employee> result2 = employeeDao.retrieveSurname("Smith");
 
         //Then
@@ -110,6 +117,5 @@ public class CompanyDaoTestSuite {
         } catch (Exception e) {
             //do nothing
         }
-
     }
 }
