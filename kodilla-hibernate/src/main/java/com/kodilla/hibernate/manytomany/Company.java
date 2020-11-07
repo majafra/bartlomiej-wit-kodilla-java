@@ -5,10 +5,18 @@ import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-@NamedQuery(
-        name="Company.retrieveFirstLetters",
-        query = "FROM Company WHERE SUBSTR(name, 1, 3) LIKE :COMPANYNAME "
-)
+
+@NamedQueries({
+        @NamedQuery(
+                name="Company.retrieveFirstLetters",
+                query = "FROM Company WHERE SUBSTR(name, 1, 3) LIKE :COMPANYNAME "
+        ),
+        @NamedQuery(
+                name = "Company.retrievePartOfCompanyName",
+                query = "FROM Company WHERE name LIKE concat(:arg,'%')"
+        )
+})
+
 @Entity
 @Table(name = "COMPANIES")
 public class Company {
