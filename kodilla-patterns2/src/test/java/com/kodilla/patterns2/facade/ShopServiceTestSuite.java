@@ -1,9 +1,9 @@
-package com.kodilla.patterns2.api;
+package com.kodilla.patterns2.facade;
 
-import com.kodilla.patterns2.api.api.ItemDto;
-import com.kodilla.patterns2.api.api.OrderDto;
-import com.kodilla.patterns2.api.api.OrderFacade;
-import com.kodilla.patterns2.api.api.OrderProcessingException;
+import com.kodilla.patterns2.facade.api.ItemDto;
+import com.kodilla.patterns2.facade.api.OrderDto;
+import com.kodilla.patterns2.facade.api.OrderFacade;
+import com.kodilla.patterns2.facade.api.OrderProcessingException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
