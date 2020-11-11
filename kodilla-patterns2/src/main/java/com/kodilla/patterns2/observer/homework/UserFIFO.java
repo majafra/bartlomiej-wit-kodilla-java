@@ -19,6 +19,7 @@ public class UserFIFO implements ObservableFIFO{
 
     public void addTask(String task) {
         taskQue.offer(task);
+        notifyObserversFIFO();
     }
 
     public List<ObserverFIFO> getObserversFIFO() {
